@@ -12,6 +12,7 @@ from definiciones import definiciones as definiciones
 from definiciones import fecha as fecha
 from definiciones import festivos as festivo
 
+#HOLA QUE ASE
 
 class setting(object):
 	def inicia(self):
