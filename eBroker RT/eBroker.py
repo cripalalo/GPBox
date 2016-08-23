@@ -301,6 +301,14 @@ class eBroker(object):
 		print "Coste de energia: ", resultado.costeEnergia
 		print "Energia consumida: ", resultado.energiaConsumida
 
+		data = {"Coste de energia": resultado.costeEnergia.tolist(), "Energia consumida": resultado.energiaConsumida.tolist()}
+
+		with open("/home/pi/Desktop/eBroker/resultadoRT.txt","a+") as f:
+			json.dump(data,f)
+			f.write("\n")
+			f.close()
+
+
 		#--- PICO DE CARGA ---#
 
 		pot = potComp1+potComp2+potComp3
